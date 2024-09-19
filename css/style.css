@@ -1,0 +1,118 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif
+}
+
+/* ESTILOS DEL MAPA */
+.str2,.str4{stroke:#a02c2c;stroke-linecap:round;stroke-linejoin:round;stroke-width:188.1}.str4{stroke-width:114.2}.fil3{fill:#d7ffd0}.fil1{fill:#f2d0ff}.fil2{fill:#ffd0d0}.fil4{fill:#ffffd0}
+/* ----------------- */
+
+#wrapper {
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+    background: rgb(34,132,195);
+    background: linear-gradient(0deg, rgba(34,132,195,1) 58%, rgb(181, 211, 231) 100%);
+    padding:1em;
+}
+
+#titulo {
+  font-size: clamp(1.5rem, 3vw , 4rem);
+  font-weight:bold;
+  background-color:#9c03fd;
+  margin-bottom:.4em;
+  color:#fff;
+  display:block;
+  width:50%;
+  min-height:50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:.3em;
+  border-radius:.3em;
+}
+
+#mapa {
+  height:auto;
+  width:50%;
+  display:block;
+  filter:drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+g#mapa-nombres{ 
+  filter:drop-shadow(5px 5px 10px rgba(0, 0, 0, 0));
+}
+
+.provincia {
+    cursor:pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.provincia:hover {
+    filter:saturate(4);
+    stroke:#000;
+    z-index:5;
+}
+
+.provincia-nombre {
+    font-size:3500px;
+    fill:rgba(0,0,0,1);
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+
+.caja {
+  margin-block:.3em;
+  width:50%;
+  border:1px solid #fff;
+  background-color:rgba(255,255,255,0.8);
+  border-radius:5px;
+  padding:1em;
+  display:flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: flex-start;
+  gap:.5em;
+}
+
+.instrucciones ul {
+  list-style-type: none;
+}
+
+.instrucciones ul li {
+  margin-bottom:.3em;
+}
+
+#filtro .input-group input[type="checkbox"],#filtro .input-group label {
+  cursor: pointer;
+}
+
+#filtro .input-group label {
+  font-weight:bold;
+}
+
+.popup-title {
+  padding-top:.2em !important;
+  font-size:clamp(2rem, 4vw + 1rem, 4rem);;
+  letter-spacing: -.05em;
+}
+
+.popup-text {
+  color:#555 !important;
+}
+
+
+
+@media (max-width: 768px) {
+  #mapa, #titulo, .caja {
+    width:100%;
+  }
+}
